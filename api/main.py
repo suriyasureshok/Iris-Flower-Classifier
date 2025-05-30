@@ -14,6 +14,10 @@ class IrisData(BaseModel):
     petal_length: float
     petal_width: float
 
+@app.get("/")
+def root():
+    return {"message": "Welcome to the Iris Flower Classifier API!"}
+
 @app.post("/predict")
 def predict_species(data: IrisData):
     logger.info(f"Received data: {data}")
