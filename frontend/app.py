@@ -15,7 +15,7 @@ with st.form("iris_form"):
     submitted = st.form_submit_button("Predict Species")
 
     if submitted:
-        api_url = "http://127.0.0.1:8000/predict"
+        api_url = "https://iris-flower-classifier-wxzn.onrender.com/predict"
         input_data = {
             "sepal_length": sepal_length,
             "sepal_width": sepal_width,
